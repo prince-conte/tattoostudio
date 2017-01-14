@@ -1,0 +1,80 @@
+{
+  "name": "jeet",
+  "version": "7.0.0",
+  "description": "A simple Sass and Stylus grid system. Built for humans.",
+  "homepage": "https://jeet.gs",
+  "license": "MIT",
+  "main": "./index.js",
+  "author": {
+    "name": "Cory Simmons",
+    "email": "cory@launchboxhq.com"
+  },
+  "contributors": [
+    {
+      "name": "Jake Cleary",
+      "email": "shout@jakecleary.net",
+      "url": "http://jakecleary.net"
+    },
+    {
+      "name": "Andreas Nedbal",
+      "email": "andy@pixelde.su",
+      "url": "http://pixelde.su"
+    },
+    {
+      "name": "Sam Saccone"
+    }
+  ],
+  "keywords": [
+    "grid",
+    "stylus",
+    "scss"
+  ],
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "test:node": "node test/node-stylus/node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojotech/jeet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mojotech/jeet/issues"
+  },
+  "gitHead": "47e2c0c0e59f8c9991c4372bec3b4d2dd1446b62",
+  "_id": "jeet@7.0.0",
+  "_shasum": "c465180980856006e0130bfc626fe75b78807d6c",
+  "_from": "jeet@latest",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.6.0",
+  "_npmUser": {
+    "name": "corysimmons",
+    "email": "cory@launchboxhq.com"
+  },
+  "dist": {
+    "shasum": "c465180980856006e0130bfc626fe75b78807d6c",
+    "tarball": "https://registry.npmjs.org/jeet/-/jeet-7.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "braxtonfair",
+      "email": "braxtonfair@hotmail.com"
+    },
+    {
+      "name": "corysimmons",
+      "email": "cory@launchboxhq.com"
+    },
+    {
+      "name": "pixeldesu",
+      "email": "andy@pixelde.su"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/jeet-7.0.0.tgz_1477419210683_0.8976947087794542"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jeet/-/jeet-7.0.0.tgz"
+}

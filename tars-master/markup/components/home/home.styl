@@ -1,0 +1,187 @@
+.home
+    position absolute
+    display block
+    width 100%
+    height 100%
+    top 0px
+    left 0px
+    
+
+    
+    &__slide
+        position absolute
+        width 100%
+        height 100%
+        top 0px
+        left 0px
+        display none
+        
+        &__nav
+            position absolute
+            display block
+            width 100%
+            height 100%
+            top 0px
+            left 0px
+            
+            &__item
+                position absolute
+                display block
+                width 66px
+                height 66px
+                top 50%
+                left -126px
+                margin-top -38px
+                border-radius 50%
+                cursor pointer
+                &:hover
+                   .home__slide__nav__item_fade
+                       background colfirm
+                       opacity .5
+                       
+                &--next
+                    transform rotate(180deg)
+                    left auto
+                    right -126px
+                
+                &_fade
+                    background #000
+                    opacity .2
+                    m-speed(.4s)
+                    position absolute
+                    display block
+                    width 100%
+                    height 100%
+                    top 0px
+                    left 0px
+                    border-radius 50%
+                
+                
+                &_stick
+                    position absolute
+                    display block
+                    top 17px
+                    left 50%
+                    margin-left -7px
+                    width 12px
+                    height 33px
+                    background url(../img/general/stick.png)
+                    bgc()
+            &__content
+                max-width 1240px
+                display block
+                position relative
+                margin 0 auto
+                    
+            
+        &__slider-tab
+            position absolute
+            width 100%
+            height 100%
+            top 0px
+            left 0px
+            display table
+
+        &__article
+            position relative
+            display block
+            margin 0 auto
+            text-align center
+            top 60px
+            @media screen and (max-width: 1600px)
+                top 30px
+        
+            &_title
+                display block
+                font-size 54px
+                line-height 60px
+                color #fff
+                font-family fonth
+                margin-bottom 28px
+              
+            &_desc
+                display block
+                font-size 20px
+                line-height 28px
+                color #fff
+                margin-bottom 38px
+                padding 0 50px
+            
+            &__form
+                position relative
+                display block
+                margin 0 auto
+                width 365px
+                padding-top 40px
+
+                &_input
+                    display block
+                    margin-bottom 10px
+                    border-radius 50px
+                    border solid 1px #c6c6c6
+                    width 100%
+                    color coltxt
+                    font-size 15px
+                    line-height 15px
+                    placeholder-color(coltxt)
+            
+                &_button
+                    width 100%
+                    border solid 0px
+                    
+            &__form-desc
+                display block
+                margin-top 40px
+                font-size 16px
+                line-height 16px
+                color #fff
+                text-align center
+                
+                &_radio
+                    display inline-block
+                    position relative
+                    margin-right 16px
+                    width 24px
+                    height 24px
+                    background #fff
+                    border-radius 50%
+                    top 6px
+                    
+                    &:before
+                        content '';
+                        position absolute
+                        display block
+                        width 10px
+                        height 10px
+                        border-radius 50%
+                        background colfirm
+                        top 7px
+                        left 7px
+                
+                
+        
+            
+        
+    &--slide1
+        background url(../img/general/slide1.jpg)
+        bgtc()
+        display block
+        
+    &--slide2
+        background url(../img/general/slide3.jpg)
+        bgtc()
+        //display block
+                  
+    &--slide3
+        background url(../img/general/slide3.jpg)
+        bgtc()
+        //display block
+        .home__slide__article_desc
+            padding 0 90px
+                
+    &--slide4
+        background url(../img/general/slide2.jpg)
+        bgtc()
+                 
+            
+        

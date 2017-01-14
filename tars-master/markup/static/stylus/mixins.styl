@@ -1,0 +1,169 @@
+// Mixins.
+
+
+placeholder-color(color)
+    &::-webkit-input-placeholder 
+       color color !important
+    &:-moz-placeholder  /* Firefox 18- */
+       color color !important
+    &::-moz-placeholder  /* Firefox 19+ */
+       color color !important
+    &:-ms-input-placeholder  
+       color color !important
+
+m-nl()
+    margin 0
+    padding 0
+    text-indent 0
+    list-style none
+    list-style-position outside
+
+m-cf()
+    &:before, &:after
+        display table
+        content ""
+
+    &:after
+        clear both
+
+    .lt-ie8 &
+        zoom 1
+     
+.middle
+    position relative
+    display table-cell
+    vertical-align middle
+    
+.align-left
+    text-align left !important
+    
+.box-shadow-one
+    -webkit-box-shadow: 0px 20px 66px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 20px 66px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 20px 66px 0px rgba(0, 0, 0, 0.22);
+
+.bgcc
+    background-position center center !important
+    background-repeat no-repeat !important
+    background-size COVER !important
+
+bgcc()
+    background-position center center !important
+    background-repeat no-repeat !important
+    background-size COVER !important
+
+.bgtc
+    background-position top center !important
+    background-repeat no-repeat !important
+    background-size COVER !important
+
+bgtc()
+    background-position top center !important
+    background-repeat no-repeat !important
+    background-size COVER !important
+
+bgc()
+    background-position top center !important
+    background-repeat no-repeat !important
+    background-size contain !important
+
+m-blocks-justify()
+    text-align justify
+    text-justify newspaper
+
+
+// You can add your own mixins here:
+
+
+// gradient
+
+opacity(val)
+	if val > 1
+		val = val/100
+	opacity val
+	zoom 1
+	-ms-filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity="' + val*100 + '")')
+
+gr(startColor, endColor)
+	background: -moz-linear-gradient(top,  startColor 0%, endColor 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,startColor), color-stop(100%, endColor));
+	background: -webkit-linear-gradient(top,  startColor 0%, endColor 100%);
+	background: -o-linear-gradient(top,  startColor 0%, endColor 100%);
+	background: -ms-linear-gradient(top,  startColor 0%, endColor 100%);
+	background: linear-gradient(to bottom,  startColor 0%, endColor 100%);
+
+
+
+
+
+
+// in css -> columns(5)
+columns(count)
+	.column-{count}
+		width floor( (95% / count), 1 )
+		display inline-block
+		vertical-align top
+
+// in css -> width-perc(15)
+width-perc(perc)
+	.perc-{perc}
+		width: (perc)%
+
+
+base-font()
+	font-family 'MuseoSansCyrl', Century Gothic,CenturyGothic,AppleGothic, Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+	font-size FONT_SIZE
+	color FONT_COLOR
+	font-weight 500
+
+
+
+_text-overflow(width_value = 'none')
+	white-space nowrap
+	text-overflow ellipsis
+	line-height: normal;
+	overflow hidden
+	if width_value != 'none'
+		width width_value
+
+
+MAX_MEDIA(max)
+	@media screen and (max-width: max)
+		{block}
+
+MIN_MEDIA(min)
+	@media screen and (min-width: min)
+		{block}
+
+ONDEVICE( type, onlyThis = false )
+	_currentIndex = -1
+	_currentValue = 0
+	for _screen, index in SCREENS
+		if _screen[0] == type
+			_currentIndex = index
+			_currentValue = _screen[1]
+	if _currentIndex == -1
+		error("SCREEN " + type + " not found in " + SCREENS)
+	_type = _currentIndex == 0 ? 'min-width' : 'max-width'
+	CURRENT_MEDIA_WIDTH = _currentValue
+
+	if(onlyThis == true && _currentIndex != 0 && _currentIndex != (length(SCREENS) - 1))
+		@media screen and (min-width: unit(SCREENS[ _currentIndex + 1 ][1] + 1, 'px')) and (max-width: unit(_currentValue, 'px'))
+			{block}
+	else
+		if onlyThis == 'min'
+			_type = 'min-width'
+			_currentValue = _currentValue + 1
+		@media screen and ({_type}: unit(_currentValue, 'px'))
+			{block}
+            
+
+
+	CURRENT_MEDIA_WIDTH = 0
+@import "../jeet/styl/index.styl"
+@import "mixins/_background.styl"
+@import "mixins/_rotate.styl"
+@import "mixins/_speed.styl"
+@import "mixins/_opacity.styl"
+@import "mixins/_size.styl"
+@import "mixins/_position.styl"

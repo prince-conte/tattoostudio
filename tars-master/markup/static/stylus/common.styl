@@ -1,0 +1,210 @@
+// Common styles of the project
+
+html, body
+    height 100%
+    margin 0
+    padding 0
+    background colbg
+
+
+* {margin:0px; padding:0px; box-sizing: border-box}   
+    
+    
+body
+    font-size BASE_SIZE
+    color FONT_COLOR
+    line-height LINE_HEIGHT
+    font-family fonttxt
+    
+
+    
+.fadein
+   animation: fadeBody 2s linear 1 forwards;
+
+section,
+header,
+nav
+    clearfix()
+    
+a
+    cursor pointer
+    font-size inherit
+    text-decoration none
+    
+a:visited
+    color inherit
+    
+.ssk-group
+    a:visited
+        color #fff
+    
+ul
+    list-style-type none
+    margin 0
+    padding 0
+    
+
+.all-container
+    background colbg
+    min-height 1050px
+    
+.content
+    position relative
+    margin 0 auto
+    display block
+    max-width WRAPPER_WIDTH
+    min-width 300px
+    
+    @media screen and (max-width: 1440px) 
+        width 100%
+        padding 0 20px
+
+    
+    @media screen and (min-width: 300px)  and (max-width: 599px) 
+        width 100%
+        padding 0 10px
+
+
+.page__wrapper
+    top 100%
+    left 0px
+    position absolute
+    background #f8f8f8
+    min-height 600px
+    width 100%
+    @media screen and (min-width: 300px)  and (max-width: 599px) 
+        top 50px
+
+.page__buffer
+    height 50px
+    
+.paginator
+    display block
+    padding-top 25px
+    
+.paginator__item
+    display inline-block
+    margin-right 5px
+    &:first-child
+        margin-left 10px
+    &:last-child
+        a
+            color colfirm
+
+      
+    
+    a,
+    span
+        color coltxt
+        font-family fontb
+        font-size 16px
+        text-transform uppercase
+        m-speed(.2s)
+        @media screen and (max-width: 1440px) 
+            font-size 14px
+    a:hover
+            color colfirm
+            
+      
+    
+            
+
+
+    
+h1,
+h2,
+h3,
+h4
+    font-weight 400
+    
+    
+    
+    
+h2,
+h3
+    display block
+    font-size 46px
+    font-weight 400
+    line-height 46px
+    @media screen and (min-width: 300px) and (max-width: 599px)
+        font-size 28px
+        line-height 28px
+    
+    
+h4
+    font-size 28px
+    line-height 34px
+    font-family fonttxt2
+    @media screen and (min-width: 300px) and (max-width: 599px)
+        font-size 22px
+        line-height 24px
+    
+ 
+article   
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5
+        display: inherit
+
+        
+    h2
+        font-size 20px
+            
+    h3
+        font-size 16px
+                  
+    h4
+        font-size 16px
+
+    
+    li
+        display block
+        padding 5px 10px
+        padding-left 15px
+        position relative
+        &:before
+            content '';
+            position absolute
+            display block
+            top 15px
+            left 0px
+            width 5px
+            height 5px
+            border-radius 50%
+            background coltxt
+    
+    
+     
+            
+
+
+        
+        
+input,
+textarea
+    border solid 1px #E6EAEA
+    font-size 15px
+    width 100%
+    outline none
+    resize none
+    padding 20px 32px
+    max-height 60px
+        
+textarea
+        height 150px
+        
+
+        
+.clearfix
+    clearfix()
+    
+.color-black
+    color #000 !important
+    
+b
+    font-family fontb
+       
+    

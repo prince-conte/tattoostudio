@@ -1,0 +1,42 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/footer/footer
+    include ../components/home/home
+    include ../components/kurs/kurs
+    include ../components/process/process
+    include ../components/comments/comments
+    include ../components/video/video
+    include ../components/contacts/contacts
+    
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+        +header()
+        +home()
+        section.page__wrapper
+            +kurs()
+            +process()
+            +comments()
+            +video()
+            +contacts()
+
+            
+
+
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='static/js/separate-js/masonry.pkgd.min.js')
+        script(src='static/js/separate-js/index.js')
+        script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")
+        script(src='static/js/separate-js/map.js')
+        
