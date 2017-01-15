@@ -1,0 +1,49 @@
+.popupcall
+    position fixed
+    height 280px
+    display table
+    top -280px
+    left 0px
+    border-top solid 1px #cfcfcf
+    background #fff
+    width 100%
+    text-align center
+    
+    
+    &__close
+        position absolute
+        display block
+        width 24px
+        height 24px
+        right  0px
+        top -20px
+        
+        &:hover
+            span
+                background colfirm
+                &:before
+                    background colfirm
+        
+        span
+            display block
+            position absolute
+            width 100%
+            height 2px
+            background #4a4a4a
+            left 0px
+            top 11px
+            transform rotate(134deg)
+            m-speed(.4s)
+            &:before
+                content ''
+                position absolute
+                display block
+                width 100%
+                height 100%
+                top 0px
+                left 0px
+                transform rotate(90deg)
+                background #4a4a4a
+                m-speed(.4s)
+    
+    

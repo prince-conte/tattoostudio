@@ -10,6 +10,7 @@ html(class="no-js", lang="ru")
     include ../components/comments/comments
     include ../components/video/video
     include ../components/contacts/contacts
+    include ../components/popupcall/popupcall
     
 
     head
@@ -18,12 +19,13 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         +header()
         +home()
-        section.page__wrapper
+        .page__wrapper.call--active--wrapper
             +kurs()
             +process()
             +comments()
             +video()
             +contacts()
+        +popupcall()
 
             
 

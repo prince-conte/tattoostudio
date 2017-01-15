@@ -13,6 +13,7 @@ h = 100px
         min-width 280px
         margin 0 auto
         clearfix()
+        position relative
         
         
     &__logo-block
@@ -68,4 +69,37 @@ h = 100px
                     left 0px
                     border-bottom dotted 1px #9a9a9a
                     m-speed(.4s)
+                    
+    &__phone-block
+        float right
+        width 195px
+        display inline-table
+        height h
         
+        &_phone
+            display block
+            text-align right
+            font-size 18px
+            line-height 28px
+            color coltxt
+            white-space nowrap
+            float right
+        
+        
+        &_call
+            text-align right
+            font-size 18px
+            line-height 28px
+            color colfirm
+            display inline-block
+            position relative
+            float right
+            &:before
+                content ''
+                position absolute
+                display block
+                width 100%
+                height auto
+                border-bottom dotted 1px  colfirm
+                left 0px
+                bottom 2px
