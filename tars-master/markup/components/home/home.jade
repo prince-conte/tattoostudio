@@ -9,7 +9,7 @@ mixin home(data)
                     .content
                         .home__slide__article
                             h2.home__slide__article_title Очное обучение
-                            p.home__slide__article_desc Школа татуажа Елены Нечаевой предлагает 2 типа очного обучения: базовый курс <br> (для получающих профессию) и VIP   Advanced (курс для опытных мастеров). <br> Посмотрите стоимость и расписание курсов, а также географию школы
+                            p.home__slide__article_desc.home__slide__article_desc--home-slider-desc Школа татуажа Елены Нечаевой предлагает 2 типа очного обучения: базовый курс <br> (для получающих профессию) и VIP   Advanced (курс для опытных мастеров). <br> Посмотрите стоимость и расписание курсов, а также географию школы
                             .button-block
                                 a.button Узнать больше
                                 
@@ -31,11 +31,13 @@ mixin home(data)
                 .middle
                     .content
                         .home__slide__article
-                            h2.home__slide__article_title Запишитесь на бесплатный <br> онлайн курс по татуажу <br> "штрих"
-                            p.home__slide__article_desc Академические основы штриха - вот короткий путь к профессионализму в татуаже. В этом курсе Елена Нечаева даёт 10 уроков, после которых вы гарантированно улучшите навыки эскиза и штрихования. Для курса нужны лишь <br> шариковая ручка и бумага.
+                            h2.home__slide__article_title <span class="desctop-content">Запишитесь на бесплатный <br> онлайн курс по татуажу <br> "штрих"</span> <span class="mobile-content">Бесплатный курс <br> "Штрих"</span>
+                            p.home__slide__article_desc.home__slide__article_desc--home-slider-desc Академические основы штриха - вот короткий путь к профессионализму в татуаже. В этом курсе Елена Нечаева даёт 10 уроков, после которых вы гарантированно улучшите навыки эскиза и штрихования. Для курса нужны лишь <br> шариковая ручка и бумага.
                             form.button-block
-                                input.button-block_input(placeholder="Введите ваш Email" required)
-                                a.button Получить бесплатный урок
+                                .fixforicon
+                                    input.button-block_input(placeholder="Введите ваш Email" required)
+                                    i.mail20x15
+                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
 
                                 
 
@@ -56,11 +58,67 @@ mixin home(data)
                 .middle
                     .content
                         .home__slide__article
-                            h2.home__slide__article_title Запишитесь на бесплатный <br> онлайн курс по татуажу <br>  "волосок"
-                            p.home__slide__article_desc это продвинутый курс для действующих мастеров татуажа, уже умеющих делать процедуры в технике "растушевка". После курса вы будете знать схемы укладок (азиатская, европейская и смешанная), а также научитесь делать <br> воздушные и тонкие волоски
+                            h2.home__slide__article_title  <span class="desctop-content">Запишитесь на бесплатный <br> онлайн курс по татуажу <br>  "волосок"</span> <span class="mobile-content">Бесплатный курс <br> "Волосок"</span>
+                            p.home__slide__article_desc.home__slide__article_desc--home-slider-desc это продвинутый курс для действующих мастеров татуажа, уже умеющих делать процедуры в технике "растушевка". После курса вы будете знать схемы укладок (азиатская, европейская и смешанная), а также научитесь делать <br> воздушные и тонкие волоски
                             .button-block
-                                input.button-block_input(placeholder="Введите ваш Email" required)
-                                a.button Получить бесплатный урок
+                                .fixforicon
+                                    input.button-block_input(placeholder="Введите ваш Email" required)
+                                    i.mail20x15
+                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                        
+                
+                                
+
+                        .home__slide__nav__item.home__slide__nav__item--prev
+                            .home__slide__nav__item_fade
+                            .home__slide__nav__item_stick
+                        
+                            
+                        .home__slide__nav__item.home__slide__nav__item--next
+                            .home__slide__nav__item_fade
+                            .home__slide__nav__item_stick
+                        
+                           
+                                            
+        .home__slide.home--slide3#slide4
+            .home__slide__slider-tab
+                .middle
+                    .content
+                        .home__slide__article
+                            h2.home__slide__article_title <span class="desctop-content">Запишитесь на бесплатный <br> онлайн курс по татуажу <br>  "Штрих на латексе"</span><span class="mobile-content">Бесплатный курс <br> "Штрих на латексе"</span>
+                            p.home__slide__article_desc.home__slide__article_desc--home-slider-desc это продвинутый курс для действующих мастеров татуажа, уже умеющих делать процедуры в технике "растушевка". После курса вы будете знать схемы укладок (азиатская, европейская и смешанная), а также научитесь делать <br> воздушные и тонкие волоски 
+                            .button-block
+                                .fixforicon
+                                    input.button-block_input(placeholder="Введите ваш Email" required)
+                                    i.mail20x15
+                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                        
+                
+                                
+
+                        .home__slide__nav__item.home__slide__nav__item--prev
+                            .home__slide__nav__item_fade
+                            .home__slide__nav__item_stick
+                        
+                            
+                        .home__slide__nav__item.home__slide__nav__item--next
+                            .home__slide__nav__item_fade
+                            .home__slide__nav__item_stick
+                        
+                                    
+                                            
+        .home__slide.home--slide3#slide5
+            .home__slide__slider-tab
+                .middle
+                    .content
+                        .home__slide__article
+                            h2.home__slide__article_title <span class="desctop-content">Запишитесь на бесплатный <br> онлайн курс по татуажу <br>  "Волосок на латексе"</span> <span class="mobile-content">Бесплатный курс <br> "Волосок на латексе"</span>
+                            p.home__slide__article_desc.home__slide__article_desc--home-slider-desc это продвинутый курс для действующих мастеров татуажа, уже умеющих делать процедуры в технике "растушевка". После курса вы будете знать схемы укладок (азиатская, европейская и смешанная), а также научитесь делать <br> воздушные и тонкие волоски 
+                            .button-block
+                                .fixforicon
+                                    input.button-block_input(placeholder="Введите ваш Email" required)
+                                    i.mail20x15
+                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
                         
                 
                                 
@@ -77,7 +135,7 @@ mixin home(data)
             
                 
                 
-        .home__slide.home--slide4#slide4
+        .home__slide.home--slide4#slide6
             .home__slide__slider-tab
                 .middle
                     .content
@@ -88,7 +146,26 @@ mixin home(data)
                                 input.home__slide__article__form_input(placeholder="Введите ваш телефон" required)
                                 .button-block
                                     input.button.home__slide__article__form_button(type="submit" value="отправить")
-                            p.home__slide__article__form-desc <i class="home__slide__article__form-desc_radio"></i> Подписатся на e-mail рассылку Школы татуажа Елены Нечаевой
+                            p.home__slide__article__form-desc#home__slide__article__form-desc <i class="home__slide__article__form-desc_radio"></i> Подписатся на e-mail рассылку Школы татуажа Елены Нечаевой
+                            
+                            input.home__slide__article__form-desc_radio-hidden#home__slide__article__form-desc_radio_radio-hidden(type="checkbox")
+
+                                    
+                
+        .home__slide.home--slide5#slide7
+            .home__slide__slider-tab
+                .middle
+                    .content
+                        form.home__slide__article
+                
+                    .header__content.popupcall__tanks
+                        .popupcall__tanks_icon
+                            img(src="static/img/general/tanks.png")
+                        span.contacts__body_contact-title.contacts__body_contact-title--tanks.color-fff Спасибо! 
+                        .home__slide__article_desc.color-black.home__slide__article_desc--no-margin.color-fff <b>Мы отправили письмо на вашу почту 123@12.ru.  подтвердите подписку</b>
+           
+                            
+                            input.home__slide__article__form-desc_radio-hidden#home__slide__article__form-desc_radio_radio-hidden(type="checkbox")
 
                     
 

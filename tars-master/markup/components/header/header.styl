@@ -6,7 +6,10 @@ h = 100px
     height h
     width 100%
     background #fff
-    z-index 99999
+    z-index 100000
+    @media screen and (max-width: 1200px)
+        height 80px
+              
     
     &__content
         max-width 1300px
@@ -14,6 +17,16 @@ h = 100px
         margin 0 auto
         clearfix()
         position relative
+        @media screen and (max-width: 1300px)   
+            max-width 100%
+            padding 0 20px
+            
+        &--mobilecall
+            @media screen and (max-width: 1100px)  
+                max-width 300px
+            
+            
+            
         
         
     &__logo-block
@@ -21,7 +34,10 @@ h = 100px
         float left
         height h
         width 273px
-        
+        @media screen and (max-width: 1200px)
+            height 80px
+            
+         
         &_logo
             display block
             width 100%
@@ -32,7 +48,23 @@ h = 100px
         float left
         height h
         display inline-table
-        
+        @media screen and (max-width: 1200px)
+            display none
+            
+        &--mobile
+            display table
+            width 100%
+            padding 0
+            height 380px
+            
+            .header__navigate__topmenu__item
+                display block
+                text-align center
+                margin 0 
+                padding 30px 0
+
+            
+             
         &__topmenu
             display block
             
@@ -85,6 +117,9 @@ h = 100px
         width 195px
         display inline-table
         height h
+        @media screen and (max-width: 1200px)
+            display none
+            
         
         &_phone
             display block
@@ -113,3 +148,77 @@ h = 100px
                 border-bottom dotted 1px  colfirm
                 left 0px
                 bottom 2px
+                
+                
+    &__burger
+        position absolute
+        display none
+        width 38px
+        height 38px
+        border-radius 50%
+        background colfirm
+        top 20px
+        right 20px
+        @media screen and (max-width: 1200px)
+            display block
+            
+        span
+            position absolute
+            display block
+            width 20px
+            height 3px
+            background #fff
+            top 11px
+            left 9px
+            
+            &:before
+                content ''
+                position absolute
+                display block
+                size(100%, 100%)
+                background #fff
+                bottom -6px
+                left 0px
+                
+                            
+            &:after
+                content ''
+                position absolute
+                display block
+                size(100%, 100%)
+                background #fff
+                bottom -12px
+                left 0px
+                          
+    &__burger-close
+        position absolute
+        display none
+        width 38px
+        height 38px
+        border-radius 50%
+        background colfirm
+        top 20px
+        right 20px
+            
+        span
+            position absolute
+            display block
+            width 20px
+            height 3px
+            background #fff
+            top 18px
+            left 9px
+            transform rotate(134deg)
+            
+            &:before
+                content ''
+                position absolute
+                display block
+                size(100%, 100%)
+                background #fff
+                bottom 0px
+                left 0px
+                transform rotate(90deg)
+                
+   
+                

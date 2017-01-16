@@ -7,10 +7,20 @@
     display block
     
     &_input
-        max-width 365px
+        width 365px
         display inline-block
         border-radius 50px
         margin-right 8px
+        
+        &--mobile-menu
+            @media (max-width: 1200px)
+                margin 5px 0
+                display inline-block
+                position relative
+                margin 5 0 auto
+                width 280px
+                
+            
 
         
     &--popup
@@ -39,6 +49,23 @@
     border-radius 50px
     cursor pointer
     
+    @media (max-width: 1000px)
+        font-size 9px
+        padding 14px 18px
+        min-width 130px !important
+        min-height 35px
+        
+    @media (max-width: 700px)
+        font-size 9px
+        padding 8px 10px
+        min-width 130px !important
+        min-height 35px
+    
+    &--inline-submit
+        display inline-block
+        width auto
+        border solid 0px 
+    
     
     
     
@@ -63,6 +90,15 @@
     display inline-block
     margin-right 9px
     bg-svg($phone14x14); 
+            
+.mail20x15
+    position absolute
+    top 22px
+    right 27px
+    display block
+    bg-svg($mail20x15)
+    @media (max-width: 1000px)
+        top 14px
     
 .vkcom
     bgc()

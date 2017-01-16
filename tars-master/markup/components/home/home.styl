@@ -6,6 +6,7 @@
     top 0px
     left 0px
     m-speed(.4s)
+    background #6f3aa3
     
 
     
@@ -40,11 +41,19 @@
                        background colfirm
                        opacity .5
                        
+                @media screen and (max-width: 1300px)     
+                    left 25px
+                       
                 &--next
                     transform rotate(180deg)
                     left auto
                     right -126px
                 
+                       
+                    @media screen and (max-width: 1300px)     
+                        right 25px
+                        
+                    
                 &_fade
                     background #000
                     opacity .2
@@ -99,6 +108,9 @@
                 color #fff
                 font-family fonth
                 margin-bottom 28px
+                
+                &--process
+                    color coltxt
               
             &_desc
                 display block
@@ -107,6 +119,26 @@
                 color #fff
                 margin-bottom 38px
                 padding 0 50px
+                
+                &--no-margin
+                    margin 0px
+                    
+                    
+                &--home-slider-desc
+                    @media screen and (max-width: 1200px)
+                        display none
+                        
+                                        
+                &--home-mobilecall
+                    @media screen and (max-width: 1200px)
+                        font-size 16px
+                        padding 0px
+                        margin-bottom 10px
+                        br
+                            display none
+                            
+                        
+                    
             
             &__form
                 position relative
@@ -137,6 +169,7 @@
                 line-height 16px
                 color #fff
                 text-align center
+                cursor pointer
                 
                 &_radio
                     display inline-block
@@ -148,16 +181,27 @@
                     border-radius 50%
                     top 6px
                     
+                    
+                    
                     &:before
                         content '';
                         position absolute
-                        display block
+                        display none
                         width 10px
                         height 10px
                         border-radius 50%
                         background colfirm
                         top 7px
                         left 7px
+                        
+                &_radio-hidden
+                    width 0px
+                    height 0px
+                    position absolute
+                    visibility hidden
+                        
+                        
+        
                 
                 
         
@@ -166,7 +210,7 @@
     &--slide1
         background url(../img/general/slide1.jpg)
         bgtc()
-        display block
+        
         
     &--slide2
         background url(../img/general/slide3.jpg)
@@ -174,7 +218,19 @@
         //display block
                   
     &--slide3
+        background url(../img/general/slide4.jpg)
+        bgtc()
+        //display block
+        .home__slide__article_desc
+            padding 0 90px
+              
+    &--slide4
         background url(../img/general/slide3.jpg)
+        bgtc()
+        //display block
+                  
+    &--slide5
+        background url(../img/general/slide4.jpg)
         bgtc()
         //display block
         .home__slide__article_desc
@@ -183,6 +239,17 @@
     &--slide4
         background url(../img/general/slide2.jpg)
         bgtc()
+          
+        
+    &--slide5
+        background url(../img/general/slide2.jpg)
+        bgtc()
+        
+        
+#slide1
+    display block
                  
-            
+.active
+    .home__slide__article__form-desc_radio:before
+        display block
         

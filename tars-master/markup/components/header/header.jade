@@ -2,7 +2,7 @@ mixin header(data)
 
     header.header
         .header__content
-            .header__logo-block
+            a.header__logo-block.scrl(href="#homeblock")
                 .middle
                     img.header__logo-block_logo(src="static/img/general/logo.png" alt="Школа татуажа Елены Нечаевой")
                     
@@ -11,7 +11,7 @@ mixin header(data)
                     ul.header__navigate__topmenu
                     
                         li.header__navigate__topmenu__item
-                            a.header__navigate__topmenu_link.scrl(href="#wrapper") ЗАОЧНОЕ ОБУЧЕНИЕ  
+                            a.header__navigate__topmenu_link.scrl(href="#process") ЗАОЧНОЕ ОБУЧЕНИЕ  
                                     
                         li.header__navigate__topmenu__item
                             a.header__navigate__topmenu_link(href="http://krasnodar.tatuazh-obuchenie.ru/") ОЧНОЕ ОБУЧЕНИЕ
@@ -26,6 +26,12 @@ mixin header(data)
                 .middle
                     a.header__phone-block_phone(href="tel:88005001827") <i class="phone14x14"></i> 8 (800) <b>500-18-27</b>
                     a.header__phone-block_call#callopen Заказать звонок
+                    
+        a.header__burger#mobilemenuopen
+            span
+            
+        a.header__burger-close#mobilemenuclose
+            span
                         
                 
                 
