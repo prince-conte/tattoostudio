@@ -33,7 +33,7 @@
         @media screen and (max-width: 400px)
             position relative
             display block
-            min-height 230px
+            height 230px
             margin-bottom 14px
         
         
@@ -61,7 +61,11 @@
                        opacity .5
                        
                 @media screen and (max-width: 1300px)     
+                    left 20px
+                                          
+                @media screen and (max-width: 1000px)     
                     left 0px
+                    
                 @media screen and (max-width: 760px)
                     display none
                        
@@ -72,7 +76,11 @@
                 
                        
                     @media screen and (max-width: 1300px)     
-                        right 0px
+                        right 20px
+                                          
+                    @media screen and (max-width: 1000px)     
+                        left 0px
+                        
                     @media screen and (max-width: 760px)
                         display none
                         
@@ -115,10 +123,22 @@
             left 0px
             display table
             
+            &--mobile-form
+                @media screen and (max-width: 400px)
+                    height 480px !important
+                    
+            
             @media screen and (max-width: 760px)
                 position relative
                 display table
                 height 480px
+                               
+            @media screen and (max-width: 400px)
+                position relative
+                display table
+                height 230px
+                
+            
                          
 
         &__article
@@ -160,6 +180,10 @@
                 margin-bottom 38px
                 padding 0 50px
                 
+                @media screen and (max-width: 1200px)
+                    padding 0 
+                
+                
                 &--no-margin
                     margin 0px
                     
@@ -176,6 +200,7 @@
                         margin-bottom 10px
                         br
                             display none
+                            
                             
                         
                     
@@ -223,7 +248,7 @@
                 position relative
                 padding 0 25px
                 line-height 22px
-                @media screen and (max-width: 400px)
+                @media screen and (max-width: 760px)
                     display inline-block
                     font-size 12px
                     line-height 20px
@@ -303,6 +328,8 @@
         //display block
         .home__slide__article_desc
             padding 0 90px
+            @media screen and (max-width: 600px)
+                padding 0
               
     &--slide4
         background url(../img/general/slide3.jpg)
@@ -317,11 +344,16 @@
         bgtc()
         @media screen and (max-width: 760px)
             display block
+         @media screen and (max-width: 400px)
+            display block
+            margin-bottom 0px
         
         //display block
         .home__slide__article_desc
             padding 0 90px
-                
+            @media screen and (max-width: 600px)
+                padding 0
+              
     &--slide6
         background url(../img/general/slide2.jpg)
         bgtc()
@@ -386,14 +418,43 @@
         
         .mobiletanks
             display none
-             
+            
+    @media screen and (max-width: 400px)
+        height 695px
+        margin-bottom 28px
+        .mobileform
+            display block
+            .home__slide__slider-tab
+                height 480px
+              
+        
+        .mobiletanks
+            display none
+
+            
+            .home__slide__slider-tab
+                height 480px
+                    
+            
 .mobile-mail-go
     @media screen and (max-width: 760px)
         height 960px
         margin-bottom 28px
         .mobiletanks
             display block
-        
         .mobileform
             display none
+
+    @media screen and (max-width: 400px)
+        height 695px
+        margin-bottom 28px
+        .mobileform
+            display none
+            .home__slide__slider-tab
+                height 480px
+
+        .mobiletanks
+            display block
+            .home__slide__slider-tab
+                height 480px
         

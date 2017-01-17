@@ -1,7 +1,7 @@
 head: {
     
     defaults: {
-        title: 'ЮНИЛАЙН ИЗДАТЕЛЬСТВО ПЕЧАТНОЙ ПРОДУКЦИИ',
+        title: 'Школа татуажа Елены Нечаевой',
         useSocialMetaTags: true
     }
 }

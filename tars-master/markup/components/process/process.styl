@@ -6,6 +6,7 @@
     height: "calc(%s + 68px)" % v 
     @media (max-width: 800px)
         height auto
+        top -150px
             
     
     .content
@@ -21,7 +22,9 @@
         width 100%
         height: 100%
         @media (max-width: 600px)
-            top 100px
+            top 0px
+            height 540px
+            background url(../img/general/facebg2.jpg)
         
     &_title
         padding-top 125px
@@ -31,8 +34,9 @@
         padding-bottom 68px
         margin 0
         @media (max-width: 600px)
-            padding-top 0px
+            padding-top 120px
             font-size 30px
+            position relative
         
     &__process-grid
         display block

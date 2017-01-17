@@ -26,7 +26,7 @@ mixin home(data)
 
 
                                             
-        .home__slide.home--slide2.mobile-active#slide2
+        .home__slide.home--slide2#slide2
             .home__slide__slider-tab
                 .middle
                     .content
@@ -37,7 +37,11 @@ mixin home(data)
                                 .fixforicon
                                     input.button-block_input(placeholder="Введите ваш Email" required)
                                     i.mail20x15
-                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                    
+                                span.desctop-content
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                span.mobile-content#mob-form-open1
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
 
                                 
 
@@ -52,7 +56,7 @@ mixin home(data)
                    
                
                
-               
+            // -- mobile form block   
             .mobileform
                                 
                 
@@ -101,11 +105,17 @@ mixin home(data)
                         .home__slide__article
                             h2.home__slide__article_title  <span class="desctop-content">Запишитесь на бесплатный <br> онлайн курс по татуажу <br>  "волосок"</span> <span class="mobile-content">Бесплатный курс <br> "Волосок"</span>
                             p.home__slide__article_desc.home__slide__article_desc--home-slider-desc это продвинутый курс для действующих мастеров татуажа, уже умеющих делать процедуры в технике "растушевка". После курса вы будете знать схемы укладок (азиатская, европейская и смешанная), а также научитесь делать <br> воздушные и тонкие волоски
-                            .button-block
+                            form.button-block
                                 .fixforicon
                                     input.button-block_input(placeholder="Введите ваш Email" required)
                                     i.mail20x15
-                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                    
+                                span.desctop-content
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                span.mobile-content#mob-form-open2
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+
+      
                         
                 
                                 
@@ -159,11 +169,7 @@ mixin home(data)
                                 .home__slide__article_desc.color-black.home__slide__article_desc--no-margin.color-fff <b>Мы отправили письмо на вашу почту 123@12.ru.  подтвердите подписку</b>
            
                             
-
-     
-               
-               
-               
+ 
                
                
                                             
@@ -178,7 +184,13 @@ mixin home(data)
                                 .fixforicon
                                     input.button-block_input(placeholder="Введите ваш Email" required)
                                     i.mail20x15
-                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                    
+                                span.desctop-content
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                span.mobile-content#mob-form-open3
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+
+      
                         
                 
                                 
@@ -217,6 +229,7 @@ mixin home(data)
                                     input.home__slide__article__form-desc_radio-hidden(type="checkbox")
 
             
+            
                                     
             .mobiletanks
                 
@@ -234,6 +247,7 @@ mixin home(data)
            
                             
 
+            
            
                
                
@@ -253,7 +267,13 @@ mixin home(data)
                                 .fixforicon
                                     input.button-block_input(placeholder="Введите ваш Email" required)
                                     i.mail20x15
-                                input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                    
+                                span.desctop-content
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                span.mobile-content#mob-form-open4
+                                    input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+
+      
                         
                 
                                 
@@ -292,6 +312,7 @@ mixin home(data)
                                     input.home__slide__article__form-desc_radio-hidden(type="checkbox")
 
             
+            
                                     
             .mobiletanks
                 
@@ -308,6 +329,8 @@ mixin home(data)
                                 .home__slide__article_desc.color-black.home__slide__article_desc--no-margin.color-fff <b>Мы отправили письмо на вашу почту 123@12.ru.  подтвердите подписку</b>
            
                             
+
+                  
 
                 
         .home__slide.home--slide6#slide6
