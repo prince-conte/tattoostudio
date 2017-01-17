@@ -5,12 +5,18 @@
 
 .button-block
     display block
+    @media (max-width: 1000px)
+        text-align center
     
     &_input
         width 365px
         display inline-block
         border-radius 50px
         margin-right 8px
+        @media (max-width: 1200px)
+            margin-bottom 8px
+            margin-right 0px
+            width 200px
         
         &--mobile-menu
             @media (max-width: 1200px)
@@ -61,11 +67,15 @@
         min-width 130px !important
         min-height 35px
     
+    @media (max-width: 600px)  
+        padding 14px 10px
+        
     &--inline-submit
         display inline-block
         width auto
         border solid 0px 
-    
+        @media (max-width: 1200px)
+            width 200px
     
     
     
@@ -99,6 +109,9 @@
     bg-svg($mail20x15)
     @media (max-width: 1000px)
         top 14px
+        
+    @media (max-width: 600px) 
+        display none
     
 .vkcom
     bgc()

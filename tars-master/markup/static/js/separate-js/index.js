@@ -4,9 +4,24 @@ $(document).ready(function() {
         scrollTop = 0;
         subscribeClick = 0;
         sliderDinamic = 1;
+  
+    
+    
+    
+// grid for comments 
    
     
-// scroll to
+    $('#mesonry').masonry({
+        // options
+        itemSelector: '.comments__comments-grid__item'
+    });
+  
+//__________________________________________________
+    
+    
+    
+    
+// scroll to for menu
     
     $("a.scrl").click(function () {
         
@@ -18,11 +33,17 @@ $(document).ready(function() {
         return false;
     });
     
+//__________________________________________________
     
     
     
     
-// scroll one kurs
+    
+    
+    
+    
+// scroll one kurs (скроллит до верха и открывает нужный слайд)
+
     
     $("#one_kurs").click(function () {
         
@@ -89,28 +110,18 @@ $(document).ready(function() {
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
         return false;
 
-    });
+    });  
+    
+//__________________________________________________ 
     
     
     
     
     
     
+
     
-    
-    
-    
-    
-// grid for comments 
-   
-    
-    $('#mesonry').masonry({
-        // options
-        itemSelector: '.comments__comments-grid__item'
-    });
-  
-    
-// open callpopup
+// open callpopup (открытие формы заказа звонка)
     
     
     $(window).scroll(function() {
@@ -146,24 +157,21 @@ $(document).ready(function() {
     });   
     
     
+
     
-    
-    
-       
+    // mobile 
     
     $("#mobileopencall").click(function() {
         
 
         $('#popupcall').addClass('call--active');
         $(".mobile-menu").fadeOut();
-        
-                
-
-        
+         
         
     });   
     
     
+//__________________________________________________ 
     
     
     
@@ -178,7 +186,8 @@ $(document).ready(function() {
     
     
     
-// close callpopup    
+    
+// close callpopup (закрытие телефонной формы)
         
     $(".closepopupcall").click(function() {
         
@@ -194,7 +203,9 @@ $(document).ready(function() {
     
     
     
-// for subscribe news studio  
+    
+    
+// for subscribe news studio  (для чекбокса)
     
     $("#home__slide__article__form-desc").click(function() {
         
@@ -219,6 +230,7 @@ $(document).ready(function() {
     });
     
     
+//__________________________________________________ 
     
     
     
@@ -232,7 +244,9 @@ $(document).ready(function() {
     
     
     
-
+    
+    
+// slider
     
     
     
@@ -285,8 +299,6 @@ $(document).ready(function() {
           } 
         
     });
-    
-    
     
 
     // slider    
@@ -344,10 +356,12 @@ $(document).ready(function() {
     
     
     
+//__________________________________________________ 
     
-   
     
     
+    
+// mobile menu
     
 $("#mobilemenuopen").click(function() {
         
@@ -365,21 +379,26 @@ $("#mobilemenuclose").click(function() {
        
 });  
     
+        
+    
+//__________________________________________________ 
+    
+    
+        
     
     
     
     
     
     
-    
-    
-    
-    
+// (Выравнивание высоты)
     
     
 $('.kurs__item__content_title').equalHeights();
 $('.kurs__item__content_desc').equalHeights();
     
+    
+//__________________________________________________ 
     
     
     

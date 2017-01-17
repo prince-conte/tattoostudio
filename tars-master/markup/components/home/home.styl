@@ -7,6 +7,14 @@
     left 0px
     m-speed(.4s)
     background #6f3aa3
+    @media screen and (max-width: 760px)
+        position relative
+        display block
+        height auto
+        background #fff
+        
+   
+
     
 
     
@@ -17,6 +25,17 @@
         top 0px
         left 0px
         display none
+        @media screen and (max-width: 760px)
+            position relative
+            display block
+            height 480px
+            margin-top 14px
+        @media screen and (max-width: 400px)
+            position relative
+            display block
+            min-height 230px
+            margin-bottom 14px
+        
         
         &__nav
             position absolute
@@ -42,7 +61,9 @@
                        opacity .5
                        
                 @media screen and (max-width: 1300px)     
-                    left 25px
+                    left 0px
+                @media screen and (max-width: 760px)
+                    display none
                        
                 &--next
                     transform rotate(180deg)
@@ -51,7 +72,9 @@
                 
                        
                     @media screen and (max-width: 1300px)     
-                        right 25px
+                        right 0px
+                    @media screen and (max-width: 760px)
+                        display none
                         
                     
                 &_fade
@@ -91,6 +114,12 @@
             top 0px
             left 0px
             display table
+            
+            @media screen and (max-width: 760px)
+                position relative
+                display table
+                height 480px
+                         
 
         &__article
             position relative
@@ -100,6 +129,8 @@
             top 60px
             @media screen and (max-width: 1600px)
                 top 30px
+            @media screen and (max-width: 1000px)
+                top 0px
         
             &_title
                 display block
@@ -108,9 +139,18 @@
                 color #fff
                 font-family fonth
                 margin-bottom 28px
+                @media screen and (max-width: 760px)
+                    font-size 20px
+                    line-height 28px
+                    margin-bottom 10px
+                    
                 
                 &--process
                     color coltxt
+                    
+                &--form-mobile
+                    @media screen and (max-width: 760px)
+                        color coltxt
               
             &_desc
                 display block
@@ -146,6 +186,9 @@
                 margin 0 auto
                 width 365px
                 padding-top 40px
+                @media screen and (max-width: 400px)
+                    width 100%
+                    
 
                 &_input
                     display block
@@ -157,10 +200,17 @@
                     font-size 15px
                     line-height 15px
                     placeholder-color(coltxt)
+                    @media screen and (max-width: 400px)
+                        width 280px
+                        display inline-block
+                        
+                
             
                 &_button
                     width 100%
                     border solid 0px
+                    @media screen and (max-width: 400px)
+                        width 280px
                     
             &__form-desc
                 display block
@@ -170,6 +220,16 @@
                 color #fff
                 text-align center
                 cursor pointer
+                position relative
+                padding 0 25px
+                line-height 22px
+                @media screen and (max-width: 400px)
+                    display inline-block
+                    font-size 12px
+                    line-height 20px
+                    color coltxt
+                    text-align left
+                    padding-left 50px
                 
                 &_radio
                     display inline-block
@@ -181,6 +241,14 @@
                     border-radius 50%
                     top 6px
                     
+                    @media screen and (max-width: 400px)
+                        position absolute
+                        display block
+                        left 15px
+                        top 5px
+                        border solid 1px #c7c7c7
+                        
+                    
                     
                     
                     &:before
@@ -191,8 +259,8 @@
                         height 10px
                         border-radius 50%
                         background colfirm
-                        top 7px
-                        left 7px
+                        top 6px
+                        left 6px
                         
                 &_radio-hidden
                     width 0px
@@ -210,16 +278,28 @@
     &--slide1
         background url(../img/general/slide1.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+            margin-top 80px
+        @media screen and (max-width: 400px)
+            margin-top 80px    
+        
         
         
     &--slide2
         background url(../img/general/slide3.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+        
         //display block
                   
     &--slide3
         background url(../img/general/slide4.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+        
         //display block
         .home__slide__article_desc
             padding 0 90px
@@ -227,23 +307,42 @@
     &--slide4
         background url(../img/general/slide3.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+        
         //display block
                   
     &--slide5
         background url(../img/general/slide4.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+        
         //display block
         .home__slide__article_desc
             padding 0 90px
                 
-    &--slide4
+    &--slide6
         background url(../img/general/slide2.jpg)
         bgtc()
-          
+        @media screen and (max-width: 760px)
+            height 480px
+            background #f8f8f8
+            position absolute
+            width 100%
+            height 100%
+            top 0px
+            left 0px
+              
         
-    &--slide5
+    &--slide7
         background url(../img/general/slide2.jpg)
         bgtc()
+        @media screen and (max-width: 760px)
+            display block
+        @media screen and (max-width: 760px)
+            height 480px
+        
         
         
 #slide1
@@ -252,4 +351,49 @@
 .active
     .home__slide__article__form-desc_radio:before
         display block
+        
+        
+    
+    
+    
+    
+.mobileform,
+.mobiletanks
+    position relative
+    display none
+    width 100%
+    height 480px
+    width 100%
+    top 0px
+    left 0px
+    margin-bottom 14px
+    
+#slide6
+    @media screen and (max-width: 760px)
+        display none
+    
+#slide7
+    @media screen and (max-width: 760px)
+        display none
+        
+        
+.mobile-active
+    @media screen and (max-width: 760px)
+        height 960px
+        margin-bottom 28px
+        .mobileform
+            display block
+        
+        .mobiletanks
+            display none
+             
+.mobile-mail-go
+    @media screen and (max-width: 760px)
+        height 960px
+        margin-bottom 28px
+        .mobiletanks
+            display block
+        
+        .mobileform
+            display none
         
