@@ -32,6 +32,16 @@ $(document).ready(function() {
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
         return false;
     });
+        
+    $("a.mob-cont").click(function () {
+        
+        $(".mobile-menu").fadeOut();
+        $("#mobilemenuclose").fadeOut();
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top - 80;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
+    });
     
 //__________________________________________________
     
@@ -205,29 +215,48 @@ $(document).ready(function() {
     
     
     
-// for subscribe news studio  (для чекбокса)
+     // открытие формы на мобиле
     
     
      $("#mob-form-open1").click(function() {
                 $("#slide2").removeClass('mobile-mail-go');
                 $("#slide2").addClass('mobile-active');
+                var elementClick = $(this).attr("href")
+                var destination = $('#mobileformsk1').offset().top - 40;
+                jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+                return false;
      });
         
      $("#mob-form-open2").click(function() {
                 $("#slide3").removeClass('mobile-mail-go');
                 $("#slide3").addClass('mobile-active');
+                var elementClick = $(this).attr("href")
+                var destination = $('#mobileformsk2').offset().top - 40;
+                jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+                return false;
      });
             
      $("#mob-form-open3").click(function() {
                 $("#slide4").removeClass('mobile-mail-go');
                 $("#slide4").addClass('mobile-active');
+                var elementClick = $(this).attr("href")
+                var destination = $('#mobileformsk3').offset().top - 40;
+                jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+                return false;
      });
                 
      $("#mob-form-open4").click(function() {
                 $("#slide5").removeClass('mobile-mail-go');
                 $("#slide5").addClass('mobile-active');
+                var elementClick = $(this).attr("href")
+                var destination = $('#mobileformsk4').offset().top - 40;
+                jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+                return false;
      });
     
+    
+    
+    // for subscribe news studio  (для чекбокса)
     
     
     $(".home__slide__article__form-desc").click(function() {
