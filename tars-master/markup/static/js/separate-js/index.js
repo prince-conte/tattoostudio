@@ -451,7 +451,7 @@ $("#mobilemenuclose").click(function() {
     
 $('.kurs__item__content_title').equalHeights();
 $('.kurs__item__content_desc').equalHeights();
-    
+
     
 //__________________________________________________ 
     
@@ -464,3 +464,12 @@ $('.kurs__item__content_desc').equalHeights();
     
 });
 
+  
+$(window).resize(function() {
+        
+    $('.kurs__item__content_title').equalHeights();
+    $('.kurs__item__content_desc').equalHeights();
+  
+}); 
+    
+    

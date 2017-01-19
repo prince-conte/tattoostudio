@@ -4,7 +4,11 @@
     height 743px
     v = 743px
     height: "calc(%s + 68px)" % v 
-    @media (max-width: 800px)
+    @media (max-width: 1000px)
+        height auto
+    
+    
+    @media (max-width: 760px)
         height auto
         top -150px
             
@@ -25,6 +29,7 @@
             top 0px
             height 540px
             background url(../img/general/facebg2.jpg)
+            bgcc()
         
     &_title
         padding-top 125px
