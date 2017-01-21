@@ -57,7 +57,11 @@ $(document).ready(function() {
     
     $("#one_kurs").click(function () {
         
-                
+        
+        $("#homeblock").fadeIn();       
+        $(".kurs").fadeOut();
+        $(".kurs__button-block").fadeOut();
+        $("#wrapper").removeClass('no-slider')     
         $(".home__slide").fadeOut();
         $("#slide2").fadeIn();
         sliderDinamic = 2;
@@ -74,7 +78,10 @@ $(document).ready(function() {
     
     $("#two_kurs").click(function () {
         
-                
+        $("#homeblock").fadeIn();       
+        $(".kurs").fadeOut();
+        $(".kurs__button-block").fadeOut();
+        $("#wrapper").removeClass('no-slider');                  
         $(".home__slide").fadeOut();
         $("#slide3").fadeIn();
         sliderDinamic = 3;
@@ -91,7 +98,10 @@ $(document).ready(function() {
     
     $("#tree_kurs").click(function () {
         
-                
+        $("#homeblock").fadeIn();       
+        $(".kurs").fadeOut();
+        $(".kurs__button-block").fadeOut();
+        $("#wrapper").removeClass('no-slider');           
         $(".home__slide").fadeOut();
         $("#slide4").fadeIn();
         sliderDinamic = 4;
@@ -109,7 +119,10 @@ $(document).ready(function() {
     
     $("#four_kurs").click(function () {
         
-                
+        $("#homeblock").fadeIn();       
+        $(".kurs").fadeOut();
+        $(".kurs__button-block").fadeOut();
+        $("#wrapper").removeClass('no-slider');        
         $(".home__slide").fadeOut();
         $("#slide5").fadeIn();
         sliderDinamic = 5;
@@ -210,6 +223,27 @@ $(document).ready(function() {
         $('#popupcall').removeClass('call--active');
     
     }); 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     $("#mobsliders").click(function() {
+         
+          $("#slide2").fadeIn();
+          $("#slide3").fadeIn();
+          $("#slide4").fadeIn();
+          $("#slide5").fadeIn();
+    
+    
+    
+    
+     });
+    
     
     
     
@@ -425,6 +459,21 @@ $("#mobilemenuopen").click(function() {
        
 });  
     
+      
+    
+// yap
+    
+$("#yap").click(function() {
+        
+    $(".kurs").fadeIn();
+    $("#homeblock").fadeOut();
+    $("#wrapper").addClass('no-slider')   
+    $(".kurs__button-block").fadeIn();
+
+    
+       
+});  
+    
         
 $("#mobilemenuclose").click(function() {
         
@@ -449,8 +498,8 @@ $("#mobilemenuclose").click(function() {
 // (Выравнивание высоты)
     
     
-$('.kurs__item__content_title').equalHeights();
-$('.kurs__item__content_desc').equalHeights();
+//$('.kurs__item__content_title').equalHeights();
+//$('.kurs__item__content_desc').equalHeights();
 
     
 //__________________________________________________ 
