@@ -232,17 +232,17 @@ $(document).ready(function() {
     
     
     
-     $("#mobsliders").click(function() {
+     //$("#mobsliders").click(function() {
          
-          $("#slide2").fadeIn();
-          $("#slide3").fadeIn();
-          $("#slide4").fadeIn();
-          $("#slide5").fadeIn();
+          //$("#slide2").fadeIn();
+          //$("#slide3").fadeIn();
+          //$("#slide4").fadeIn();
+          //$("#slide5").fadeIn();
     
     
     
     
-     });
+     //});
     
     
     
@@ -255,6 +255,8 @@ $(document).ready(function() {
      $("#mob-form-open1").click(function() {
                 $("#slide2").removeClass('mobile-mail-go');
                 $("#slide2").addClass('mobile-active');
+                $("#wrapper").addClass('wrapp--bott');
+                $("#mobileformsk1").fadeIn();
                 var elementClick = $(this).attr("href")
                 var destination = $('#mobileformsk1').offset().top - 40;
                 jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
@@ -264,6 +266,8 @@ $(document).ready(function() {
      $("#mob-form-open2").click(function() {
                 $("#slide3").removeClass('mobile-mail-go');
                 $("#slide3").addClass('mobile-active');
+                $("#wrapper").addClass('wrapp--bott');
+                $("#mobileformsk2").fadeIn(); 
                 var elementClick = $(this).attr("href")
                 var destination = $('#mobileformsk2').offset().top - 40;
                 jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
@@ -273,6 +277,8 @@ $(document).ready(function() {
      $("#mob-form-open3").click(function() {
                 $("#slide4").removeClass('mobile-mail-go');
                 $("#slide4").addClass('mobile-active');
+                $("#wrapper").addClass('wrapp--bott');
+                $("#mobileformsk3").fadeIn();
                 var elementClick = $(this).attr("href")
                 var destination = $('#mobileformsk3').offset().top - 40;
                 jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
@@ -282,6 +288,8 @@ $(document).ready(function() {
      $("#mob-form-open4").click(function() {
                 $("#slide5").removeClass('mobile-mail-go');
                 $("#slide5").addClass('mobile-active');
+                $("#wrapper").addClass('wrapp--bott');
+                $("#mobileformsk4").fadeIn();
                 var elementClick = $(this).attr("href")
                 var destination = $('#mobileformsk4').offset().top - 40;
                 jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
@@ -303,6 +311,7 @@ $(document).ready(function() {
                 $(".home__slide__article__form-desc").addClass('active');
                 $("#slide4").removeClass('mobile-active');
                 $("#slide4").addClass('mobile-mail-go');
+                $("#mobiletanks3 .home--slide7").fadeIn();
                 subscribeClick = 1;
                 
             }
@@ -341,7 +350,7 @@ $(document).ready(function() {
     
     $(".home__slide__nav__item--prev").click(function() {
         
-    
+    $("#wrapper").removeClass('wrapp--bott');
         
       switch(sliderDinamic)
           {
@@ -394,7 +403,7 @@ $(document).ready(function() {
     
     $(".home__slide__nav__item--next").click(function() {
         
-    
+      $("#wrapper").removeClass('wrapp--bott');  
         
       switch(sliderDinamic)
           {
