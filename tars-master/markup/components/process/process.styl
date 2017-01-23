@@ -10,7 +10,7 @@
     
     @media (max-width: 760px)
         height auto
-        top -150px
+        top -1px
             
     
     .content
@@ -39,9 +39,11 @@
         padding-bottom 68px
         margin 0
         @media (max-width: 600px)
-            padding-top 120px
+            padding-top 0px
             font-size 30px
             position relative
+            &:first-child
+                padding-top 40px
         
     &__process-grid
         display block

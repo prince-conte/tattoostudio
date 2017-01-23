@@ -1,14 +1,174 @@
+
+    
+    
+// slider (ротация слайдера)  
+    
+
+
+
+// prev
+    
+function sliderPrev() { 
+    
+    $(".home__slide__nav__item--prev").click(function() {
+        
+    $("#wrapper").removeClass('wrapp--bott');
+        
+      switch(sliderDinamic)
+          {
+            case 1:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide5").fadeIn();
+                sliderDinamic = 5;
+    
+            };break;
+            case 2:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide1").fadeIn();
+                sliderDinamic = 1;
+    
+            };break;
+                  
+            case 3:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide2").fadeIn();
+                sliderDinamic = 2;
+    
+            };break;
+                              
+            case 4:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide3").fadeIn();
+                sliderDinamic = 3;
+    
+            };break;
+                                           
+            case 5:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide4").fadeIn();
+                sliderDinamic = 4;
+    
+            };break;
+                  
+
+          };
+        
+        // сброс и перезапуск таймера
+        
+        clearInterval(idTimer);
+        idTimer = setInterval("sliderNext();", intervalTime)
+        
+    });
+    
+
+
+    }; 
+    
+    
+//__________________________________________________ 
+    
+    
+
+
+// next
+
+function sliderNext() {
+
+
+    
+    
+  
+      $("#wrapper").removeClass('wrapp--bott');  
+        
+      switch(sliderDinamic)
+          {
+            case 1:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide2").fadeIn();
+                sliderDinamic = 2;
+    
+            };break;
+            case 2:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide3").fadeIn();
+                sliderDinamic = 3;
+    
+            };break;
+                  
+            case 3:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide4").fadeIn();
+                sliderDinamic = 4;
+    
+            };break;
+                  
+            case 4:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide5").fadeIn();
+                sliderDinamic = 5;
+    
+            };break;
+                              
+            case 5:
+            {
+                $(".home__slide").fadeOut();
+                $("#slide1").fadeIn();
+                sliderDinamic = 1;
+    
+            };break;
+                  
+
+          };
+    
+    
+    // сброс и перезапуск таймера
+
+    clearInterval(idTimer);
+    idTimer = setInterval("sliderNext();", intervalTime)
+
+
+
+};
+
+
+
+
 $(document).ready(function() {
 
     var  
         scrollTop = 0;
         subscribeClick = 0;
         sliderDinamic = 1;
+        intervalTime = 8000;
+        idTimer = setInterval("sliderNext();", intervalTime)
   
     
+    // вызов слайдера
+        
+    $(".home__slide__nav__item--next").click(function() {
+      
+        sliderNext();
+        
+     });
+        
+    
+    $(".home__slide__nav__item--prev").click(function() {
+        sliderPrev(); 
+    });
     
     
-// grid for comments 
+    
+    
+// grid for comments (нестандартное выравнивание) 
    
     
     $('#mesonry').masonry({
@@ -21,38 +181,11 @@ $(document).ready(function() {
     
     
     
-// scroll to for menu
-    
-    $("a.scrl").click(function () {
-        
-        $(".mobile-menu").fadeOut();
-        $("#mobilemenuclose").fadeOut();
-        var elementClick = $(this).attr("href")
-        var destination = $(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-        return false;
-    });
-        
-    $("a.mob-cont").click(function () {
-        
-        $(".mobile-menu").fadeOut();
-        $("#mobilemenuclose").fadeOut();
-        var elementClick = $(this).attr("href")
-        var destination = $(elementClick).offset().top - 80;
-        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-        return false;
-    });
-    
-//__________________________________________________
+// (скроллит до верха и открывает нужный слайд) при добавления курса, добавляем case в функции sliderPrev() и sliderNext() и здесь
+// scroll 5 kurs и т. д.
     
     
-    
-    
-    
-    
-    
-    
-// scroll one kurs (скроллит до верха и открывает нужный слайд)
+// scroll 1 kurs 
 
     
     $("#one_kurs").click(function () {
@@ -74,7 +207,7 @@ $(document).ready(function() {
 
     });
         
-// scroll two kurs
+// scroll 2 kurs
     
     $("#two_kurs").click(function () {
         
@@ -94,7 +227,7 @@ $(document).ready(function() {
 
     });
             
-// scroll two kurs
+// scroll 3 kurs
     
     $("#tree_kurs").click(function () {
         
@@ -115,7 +248,7 @@ $(document).ready(function() {
     });
     
                 
-// scroll two kurs
+// scroll 4 kurs
     
     $("#four_kurs").click(function () {
         
@@ -138,7 +271,58 @@ $(document).ready(function() {
 //__________________________________________________ 
     
     
+      
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+// scroll to for menu (спуск до якоря для десктоп)
+    
+    $("a.scrl").click(function () {
+        
+        $(".mobile-menu").fadeOut();
+        $("#mobilemenuclose").fadeOut();
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
+    });
+    
+// scroll to for menu (спуск до якоря для мобилы)
+        
+    $("a.mob-cont").click(function () {
+        
+        $(".mobile-menu").fadeOut();
+        $("#mobilemenuclose").fadeOut();
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top - 80;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
+    });
+    
+//__________________________________________________
+    
+    
+    
+    
+    
+    
+
     
     
     
@@ -339,124 +523,7 @@ $(document).ready(function() {
     
     
     
-    
-    
-    
-    
-    
-// slider
-    
-    
-    
-    $(".home__slide__nav__item--prev").click(function() {
-        
-    $("#wrapper").removeClass('wrapp--bott');
-        
-      switch(sliderDinamic)
-          {
-            case 1:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide5").fadeIn();
-                sliderDinamic = 5;
-    
-            };break;
-            case 2:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide1").fadeIn();
-                sliderDinamic = 1;
-    
-            };break;
-                  
-            case 3:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide2").fadeIn();
-                sliderDinamic = 2;
-    
-            };break;
-                              
-            case 4:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide3").fadeIn();
-                sliderDinamic = 3;
-    
-            };break;
-                                           
-            case 5:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide4").fadeIn();
-                sliderDinamic = 4;
-    
-            };break;
-                  
 
-          } 
-        
-    });
-    
-
-    // slider    
-    
-    $(".home__slide__nav__item--next").click(function() {
-        
-      $("#wrapper").removeClass('wrapp--bott');  
-        
-      switch(sliderDinamic)
-          {
-            case 1:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide2").fadeIn();
-                sliderDinamic = 2;
-    
-            };break;
-            case 2:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide3").fadeIn();
-                sliderDinamic = 3;
-    
-            };break;
-                  
-            case 3:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide4").fadeIn();
-                sliderDinamic = 4;
-    
-            };break;
-                  
-            case 4:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide5").fadeIn();
-                sliderDinamic = 5;
-    
-            };break;
-                              
-            case 5:
-            {
-                $(".home__slide").fadeOut();
-                $("#slide1").fadeIn();
-                sliderDinamic = 1;
-    
-            };break;
-                  
-
-          } 
-        
-    });
-    
-    
-    
-    
-//__________________________________________________ 
-    
-    
     
     
 // mobile menu
@@ -471,6 +538,22 @@ $("#mobilemenuopen").click(function() {
       
     
 // yap
+    
+$("#yap2").click(function() {
+        
+    $("#kurs").fadeIn();
+    $("#homeblock").fadeOut();
+    $("#wrapper").addClass('no-slider')   
+    $(".kurs__button-block").fadeIn();
+    $("#process").css("top" , "-1px")
+    
+
+    
+       
+});  
+    
+     
+// yap2
     
 $("#yap").click(function() {
         
