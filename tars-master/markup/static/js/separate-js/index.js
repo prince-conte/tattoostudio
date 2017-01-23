@@ -146,11 +146,25 @@ $(document).ready(function() {
 
     var  
         scrollTop = 0;
-        subscribeClick = 0;
-        sliderDinamic = 1;
-        intervalTime = 8000;
-        idTimer = setInterval("sliderNext();", intervalTime)
-  
+ 
+        subscribeClick = 0;  // переменная чекбокса подписки
+        sliderDinamic = 1;   // переменная слайдера
+        intervalTime = 8000; // интервал прокрутки слайдера
+        idTimer = setInterval("sliderNext();", intervalTime) // ротация слайдера
+ 
+        
+        
+    // сбрасываем ротацию банера при работе с формами
+        
+    $("input").click(function () {
+    
+        clearInterval(idTimer);
+        
+     });
+    
+    
+    
+    
     
     // вызов слайдера
         
@@ -198,6 +212,11 @@ $(document).ready(function() {
         $(".home__slide").fadeOut();
         $("#slide2").fadeIn();
         sliderDinamic = 2;
+                
+        // сброс и перезапуск таймера
+        
+        clearInterval(idTimer);
+
         
         
         var elementClick = $(this).attr("href")
@@ -218,6 +237,12 @@ $(document).ready(function() {
         $(".home__slide").fadeOut();
         $("#slide3").fadeIn();
         sliderDinamic = 3;
+                
+        // сброс и перезапуск таймера
+        
+        clearInterval(idTimer);
+
+        
         
         
         var elementClick = $(this).attr("href")
@@ -239,6 +264,13 @@ $(document).ready(function() {
         $("#slide4").fadeIn();
         sliderDinamic = 4;
         
+                
+        // сброс и перезапуск таймера
+        
+        clearInterval(idTimer);
+
+        
+        
         
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
@@ -259,6 +291,11 @@ $(document).ready(function() {
         $(".home__slide").fadeOut();
         $("#slide5").fadeIn();
         sliderDinamic = 5;
+                
+        // сброс и перезапуск таймера
+        
+        clearInterval(idTimer);
+        
         
         
         var elementClick = $(this).attr("href")
@@ -493,9 +530,6 @@ $(document).ready(function() {
             {        
                 $(".home__slide__article__form-desc_radio_radio-hidden").trigger('click');
                 $(".home__slide__article__form-desc").addClass('active');
-                $("#slide4").removeClass('mobile-active');
-                $("#slide4").addClass('mobile-mail-go');
-                $("#mobiletanks3 .home--slide7").fadeIn();
                 subscribeClick = 1;
                 
             }

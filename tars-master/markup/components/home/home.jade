@@ -1,8 +1,15 @@
 mixin home(data)
     
     .home#homeblock
+    
+        // - Все формы захвата в этом блоке
+        // - Для десктопных устройств форма захвата данных одна #slide6
+        // - Для десктопных устройств блок "спасибо" один #slide7
+        // - В слайдах #slide2, #slide3, #slide4, #slide5, для мобильных представлений, свои формы с классом .mobileform, они становятся активными если слайд получил класс .mobile-active
+    
+    
                      
-           
+        // - слайд с обчным обучением (без форм)
         .home__slide.home--slide1#slide1
             .home__slide__slider-tab
                 .middle
@@ -37,9 +44,10 @@ mixin home(data)
                                 .fixforicon
                                     input.button-block_input(placeholder="Введите ваш Email" required)
                                     i.mail20x15
-                                    
+                                // - кнопка десктопного представления (все слайды по аналогии) 
                                 span.desctop-content
                                     input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
+                                // - кнопка мобильного представления (все слайды по аналогии)
                                 span.mobile-content#mob-form-open1
                                     input.button.button--inline-submit(type="submit" value="Получить бесплатный урок")
 
@@ -56,7 +64,13 @@ mixin home(data)
                    
                
                
-            // -- mobile form block   
+            // -- форма захвата (только на мобильных) после удачной отправки должны пройти следующий команды для появления сообщения "спасибо":
+            
+            // -- $("#slide2").removeClass('mobile-active');
+            // -- $("#slide2").addClass('mobile-mail-go');
+            // -- $("#mobiletanks3 .home--slide7").fadeIn();
+            
+            
             .mobileform
                                 
                 
@@ -76,8 +90,8 @@ mixin home(data)
                                     input.home__slide__article__form-desc_radio-hidden(type="checkbox")
 
             
-                                    
-            .mobiletanks#mobiletanks1
+            // -- Сообщения "спасибо":                        
+            .mobiletanks#mobiletanks1 
                 
                 .home__slide.home--slide7
                     .home__slide__slider-tab
@@ -332,7 +346,7 @@ mixin home(data)
 
                   
 
-                
+        // - слайд с общей формой (общая форма только на десктопах)
         .home__slide.home--slide6#slide6
             .home__slide__slider-tab
                 .middle
@@ -350,7 +364,7 @@ mixin home(data)
 
             
                                     
-                
+        // - слайд с общим "спасибо" (общаее "спасибо" только на десктопах)        
         .home__slide.home--slide7#slide7
             .home__slide__slider-tab
                 .middle
@@ -364,5 +378,3 @@ mixin home(data)
                         .home__slide__article_desc.color-black.home__slide__article_desc--no-margin.color-fff <b>Мы отправили письмо на вашу почту 123@12.ru.  подтвердите подписку</b>
            
                             
-
-    
