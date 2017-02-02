@@ -9,9 +9,7 @@
 // prev
     
 function sliderPrev() { 
-    
-    $(".home__slide__nav__item--prev").click(function() {
-        
+ 
     $("#wrapper").removeClass('wrapp--bott');
         
       switch(sliderDinamic)
@@ -63,8 +61,7 @@ function sliderPrev() {
         clearInterval(idTimer);
         idTimer = setInterval("sliderNext();", intervalTime)
         
-    });
-    
+ 
 
 
     }; 
@@ -580,6 +577,7 @@ $("#yap2").click(function() {
     $("#wrapper").addClass('no-slider')   
     $(".kurs__button-block").fadeIn();
     $("#process").css("top" , "-1px")
+    setInterval(function(){ heiKurs()}, 500);   
     
 
     
@@ -595,8 +593,8 @@ $("#yap").click(function() {
     $("#homeblock").fadeOut();
     $("#wrapper").addClass('no-slider')   
     $(".kurs__button-block").fadeIn();
-
     
+    setInterval(function(){ heiKurs()}, 500);    
        
 });  
     
@@ -623,9 +621,12 @@ $("#mobilemenuclose").click(function() {
     
 // (Выравнивание высоты)
     
+function heiKurs() {
     
-//$('.kurs__item__content_title').equalHeights();
-//$('.kurs__item__content_desc').equalHeights();
+    $('.kurs__item__content_title').equalHeights();
+    $('.kurs__item__content_desc').equalHeights();
+   
+};    
 
     
 //__________________________________________________ 
@@ -640,7 +641,7 @@ $("#mobilemenuclose").click(function() {
 });
 
   
-$(window).resize(function() {
+$(document).resize(function() {
         
     $('.kurs__item__content_title').equalHeights();
     $('.kurs__item__content_desc').equalHeights();
